@@ -1,0 +1,102 @@
+/* STYLING GAME SETUP SCREEN */
+.game-setup{
+  /* border: 1px solid pink; */ /* For development purpose */
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* GAME TITLE STYLES */
+.game-name{
+  /* border: 2px solid purple; */ /* For development purpose */
+  text-align: center;
+  color: white;
+  font-size: 2.2rem; /* Change this to 2.5rem when screen changes*/
+  margin-top: 0;
+  margin-bottom: 1.7em;
+}
+
+/* GAME SETTING CONTAINER */
+.game-options{
+  /* border: 2px solid black; */ /* For development purpose */
+  background-color: white;
+  padding: 1.3em; /* CHange this to 2em when screen changes*/
+  border-radius: 20px;
+}
+
+.field{
+  margin-bottom: 2em;
+}
+
+.field p{
+  margin-top: 0;
+  font-size: 1.1rem; /* CHange this to 1.2em when screen changes*/
+  font-weight: bolder;
+  color: rgb(113, 145, 165);
+}
+
+/* STYLING RADIO GROUPS */
+.radio-group{
+  display: flex;
+  gap: 1rem;
+}
+
+/* GENERAL PROPERTIES OF BUTTONS (RADIO, START-GAME-BUTTON) */
+.radio-button, .start-game-button{
+  padding: 0.5em 1em;
+  font-size: 1.1rem; /* CHange this to 1.5em when screen changes*/
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: bolder;
+}
+
+/* PROPERTIES OF RADIO BUTTON BASED ON FLEXBOX */
+.radio-button{
+  flex: 1 1 100px;
+  background-color: rgb(188, 206, 217);
+  transition: 0.3s;
+}
+
+.radio-button:hover{
+  background-color: rgb(92, 135, 168);
+}
+
+.radio-button:focus, .radio-button:active{
+  background-color: rgb(33, 64, 87);
+}
+
+.active-radio-button, .active-radio-button:hover{
+  background-color: rgb(33, 64, 87);
+}
+
+/* START GAME BUTTON STYLES */
+.start-game-button{
+  display: block;
+  width: 100%;
+  font-size: 1.5rem; /* CHange this to 1.8em when screen changes*/
+  background-color: orange;
+}
+
+.start-game-button:hover{
+  background-color: rgb(255, 186, 58);
+}
+
+/* WHEN SCREEN WIDTH EXCEEDS 500PIXELS  */
+@media(min-width: 500px){
+  .game-name{
+    font-size: 2.5rem;
+  }
+  .game-options{
+    padding: 2em;
+  }
+  .field p{
+    font-size: 1.2rem;
+  }
+  .radio-button{
+    font-size: 1.5rem;
+  }
+  .start-game-button{
+    font-size: 1.8rem; 
+  }
+}
