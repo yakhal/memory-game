@@ -44,13 +44,15 @@ function GameSetup() {
     }
 
     return (
-        <div className="game-setup">
-            <header><h1 className='game-name'>memory</h1></header>
-            <div className="game-options">
-                <FormField configure={setThemeHandler} fieldLabel={"Select Theme"} values={["numbers", "icons"]} />
-                <FormField configure={setPlayersHandler} fieldLabel={"Number of Players"} values={["1", "2", "3", "4"]} />
-                <FormField configure={setGridSizeHandler} fieldLabel={"Grid Size"} values={["4x4", "6x6"]} />
-                <button onClick={onSubmitHandler} className="start-game-button">Start Game</button>
+        <div className="game-setup-container">
+            <div className="game-setup">
+                <header><h1 className='game-name'>memory</h1></header>
+                <div className="game-options">
+                    <FormField configure={setThemeHandler} fieldLabel={"Select Theme"} values={["numbers", "icons"]} />
+                    <FormField configure={setPlayersHandler} fieldLabel={"Number of Players"} values={["1", "2", "3", "4"]} />
+                    <FormField configure={setGridSizeHandler} fieldLabel={"Grid Size"} values={["4x4", "6x6"]} />
+                    <button onClick={onSubmitHandler} className="start-game-button">Start Game</button>
+                </div>
             </div>
         </div>
     );

@@ -1,8 +1,17 @@
 /* STYLING GAME SETUP SCREEN */
+.game-setup-container{
+  background-color: rgb(21, 41, 56);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+
 .game-setup{
   /* border: 1px solid pink; */ /* For development purpose */
   max-width: 650px;
   margin: 0 auto;
+  flex-grow: 1;
 }
 
 /* GAME TITLE STYLES */

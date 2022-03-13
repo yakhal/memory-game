@@ -16,11 +16,4 @@ html {
 body{
   margin: 0;
   font-family: sans-serif;
-  background-color: rgb(21, 41, 56);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: center;
-  padding: 0 1em;
 }
