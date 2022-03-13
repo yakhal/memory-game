@@ -1,11 +1,16 @@
-import React from 'react';
-import GameSetup from './game-setup-components/GameSetup';
-
+import React from "react";
+import GameHeader from "./game-screen-components/GameHeader";
+// import GameSetup from './game-setup-components/GameSetup';
 
 function App() {
   return (
     <div className="App">
-      <GameSetup/>
+      {/* <GameSetup/> */}
+      <div className="game-container">
+        <div className="game">
+          <GameHeader/>
+        </div>
+      </div>
     </div>
   );
 }

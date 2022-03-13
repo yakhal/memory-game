@@ -17,3 +17,97 @@ body{
   margin: 0;
   font-family: sans-serif;
 }
+
+/* ------ STYLING GAME SCREEN ------ */
+
+/* STYLING GAME CONTAINER */
+.game-container{
+  min-height: 100vh;
+  padding: 2.5em 1em; /* Change this to "2.5em" when screen > 500px and to "4em" when screen > 768px */
+}
+
+.game{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* GAME HEADER */
+.game-header{
+  /* border: 2px solid black; */ /* For Development purpose */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Copied from GameSetup.css file - Line 18 */
+.game-name{
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: bolder;
+  color: rgb(33, 64, 87);
+}
+
+/* STYLING FOR BUTTONS ON THE GAME SCREEN */
+/* These buttons will only be visible on screens > mobile screens */
+.button-group{
+  display:none; /* Change this when screen changes more than 768px */
+}
+
+/* Copied from GameSetup.css file - Line 53 */
+.game-screen-button{
+  padding: 0.5em 1.2em;
+  font-size: 1.1rem; /* CHange this to 1.5em when screen changes*/
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  color: rgb(33, 64, 87);
+  background-color: rgb(223, 231, 236);
+  font-weight: bolder;
+  transition: 0.3s;
+}
+
+.game-screen-button:hover{
+  color: white;
+  background-color: rgb(92, 135, 168);
+}
+
+.orange{
+  color: white;
+  background-color: orange;
+  transition: 0.3s;
+}
+
+/* Copied from GameSetup.css file - Line 90 */
+.orange:hover{
+  background-color: rgb(255, 186, 58);
+}
+
+
+/* MEDIA QUERIES */
+
+/* FOR BIGGER SCREEN MOBILES AND BIGGER */
+@media (min-width: 500px){
+  .game-container{
+    padding: 2.5em; /* Change to 4em when device width >= 768px */
+  }
+
+  .game-screen-button{
+    font-size: 1.4rem;
+  }
+}
+
+/* FOR TABLET DEVICES AND BIGGER */
+@media (min-width: 768px){
+  .game-container{
+    padding: 4em;
+  }
+
+  .button-group{
+    display: flex;
+    gap: 15px;
+  }
+
+  .menu-button{
+    display: none;
+  }
+}
+
