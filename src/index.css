@@ -27,11 +27,15 @@ body{
 }
 
 .game{
+  max-height: 100vh;
   max-width: 1024px;
   margin: 0 auto;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
 }
 
-/* GAME HEADER */
+/* ----------------------  GAME HEADER ------------------------ */
 .game-header{
   /* border: 2px solid black; */ /* For Development purpose */
   display: flex;
@@ -70,6 +74,56 @@ body{
   background-color: rgb(92, 135, 168);
 }
 
+/* ------------------------- GAME GRID -------------------------- */
+.game-grid{
+  margin: 100px 0;
+  border: 1px solid pink;
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 10px; /*Change when screen hits 500px*/
+}
+
+.game-grid-4x4{
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.game-grid-6x6{
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-circle{
+  height: 0px;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  position: relative;
+}
+
+.grid-circle-cover, .grid-circle-content{
+  /* border: 1px solid green; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.grid-circle-cover{
+  /* background-color: rgb(48, 72, 89); */
+}
+
+.grid-circle-content{
+  font-size: 1.5rem; /*Need to be changed on Bigger Screens*/
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(188, 206, 217);
+  color: white;
+}
+
+/* ----------------------  UTILITY CLASSES ------------------------ */
+
 .orange{
   color: white;
   background-color: orange;
@@ -81,7 +135,6 @@ body{
   background-color: rgb(255, 186, 58);
 }
 
-
 /* MEDIA QUERIES */
 
 /* FOR BIGGER SCREEN MOBILES AND BIGGER */
@@ -90,8 +143,15 @@ body{
     padding: 2.5em; /* Change to 4em when device width >= 768px */
   }
 
+/* ----------------------  GAME HEADER ------------------------ */
+
   .game-screen-button{
     font-size: 1.4rem;
+  }
+
+/* ----------------------  GAME GRID ------------------------ */
+  .game-grid{
+    gap: 20px;
   }
 }
 
@@ -100,6 +160,8 @@ body{
   .game-container{
     padding: 4em;
   }
+
+/* ----------------------  GAME HEADER ------------------------ */
 
   .button-group{
     display: flex;
